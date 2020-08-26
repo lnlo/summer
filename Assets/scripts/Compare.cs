@@ -48,7 +48,7 @@ public class Compare : MonoBehaviour
                     else
                         points.text = $"{currientPoints}/100";
                     return;
-                }                    
+                }
                 else
                     button.GetComponent<money>().MakeNew();
                 totalCountText.text = $"{count}/{totalQuestionsCount}";
@@ -57,12 +57,14 @@ public class Compare : MonoBehaviour
             {
                 field.text = "Неверно(";
                 currientPoints -= 5;
-            }                
+            }
         }
         catch (Exception)
         {
             return;
         }
+       /* field.text = "Неверно(";
+        currientPoints -= 5;*/
     }
 
 }

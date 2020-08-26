@@ -7,11 +7,44 @@ using System.Text;
 
 public class mem : MonoBehaviour
 {
+    /* public Text question;
+     public double probability;
+
+     void OnMouseDown()
+     {
+         var tuple = MakeText();
+         question.text = tuple.Item2;
+         probability = tuple.Item1;
+     }*/
     public Text question;
     public double probability;
+    public GameObject inputField;
+    bool isStarted;
+    public Text clockText;
+    public Text totalCountText;
+    public Text pointsText;
 
     void OnMouseDown()
     {
+        if (isStarted)
+        {
+            clockText.GetComponent<clock>().isStarted = false;
+            isStarted = false;
+        }
+        else
+        {
+            totalCountText.text = $"0/5";
+            pointsText.text = "";
+            clockText.GetComponent<clock>().isStarted = true;
+            clockText.GetComponent<clock>().seconds = 0;
+            MakeNew();
+        }
+    }
+
+    public void MakeNew()
+    {
+        isStarted = true;
+        inputField.GetComponent<compareMems>().isNew = true;
         var tuple = MakeText();
         question.text = tuple.Item2;
         probability = tuple.Item1;

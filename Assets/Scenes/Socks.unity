@@ -1918,6 +1918,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   question: {fileID: 1175760903}
   probability: 0
+  inputField: {fileID: 1106767267}
+  clockText: {fileID: 1103173304}
+  totalCountText: {fileID: 1335134861}
+  pointsText: {fileID: 169325171}
 --- !u!114 &2103526475
 MonoBehaviour:
   m_ObjectHideFlags: 0

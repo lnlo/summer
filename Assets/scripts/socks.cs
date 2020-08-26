@@ -7,15 +7,6 @@ using System.Text;
 
 public class socks : MonoBehaviour
 {
-    /*public Text question;
-    public double probability;
-
-    void OnMouseDown()
-    {
-        var tuple = MakeText();
-        question.text = tuple.Item2;
-        probability = tuple.Item1;
-    }*/
     public Text question;
     public double probability;
     public GameObject inputField;
@@ -44,7 +35,7 @@ public class socks : MonoBehaviour
     public void MakeNew()
     {
         isStarted = true;
-        inputField.GetComponent<Compare>().isNew = true;
+        inputField.GetComponent<compareSocks>().isNew = true;
         var tuple = MakeText();
         question.text = tuple.Item2;
         probability = tuple.Item1;
